@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> CodeRangers</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="header-footer-style.css">
+  <link rel="icon" type = "image/x-icon" href="images/logo.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <link rel="stylesheet" href="/w3css/3/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <style>
+    
+
+body{
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+#background-img {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+.containVision {
+  position: relative;
+  width: 100%;
+  height: auto;
+  
+}
+.vision {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  color: #E9C46A;
+  background: rgba(253, 219, 83, 0.5);
+  padding: 10px;
+  border-radius: 5px; 
+  color: white; 
+  max-width: 30%;
+}
+.containVision img { 
+  width: 100%;
+  height: auto;
+  /* opacity: 0.8; */
+}
+
+    /* Style the courses section */
+    .courses {
+      margin-top: 20px;
+      border-style: solid;
+      align-content: flex-start;
+      padding: 1em 1em 1em 1em ;
+      
+    }
+
+     /* course Section */
+.course-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color:var(--primary-color);
+  padding: 20px 0;
+  flex-wrap: wrap; 
+ justify-content: center; 
+  
+    
+}
+
+.course-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.course-link {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+    margin: 2%;
+    position: relative;
+     
+  }
+
+  .course-link img {
+    width: 100%;
+    max-height: 60%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 3%;
+  }
+
+  .course-link h3 ,p{
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--secondary-color);
+  }
+
+  .course-description {
+    text-align: center;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+  }
+
+  .course-description p {
+    max-height: 60px;
+    overflow: hidden; 
+  }
+
+  .course-description:hover p {
+    max-height: none;
+    overflow: auto; 
+  }
+
+
+.review {
+
+  background-color: var(--primary-color);
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 1rem;
+  border-radius: 10px;
+  padding: 1rem; 
+  width: calc(33.33% - 2rem);
+  box-sizing: border-box;
+ 
+  
+}
+ 
+.footer p{
+  color: #ffff;
+}
+
+
+/*.reviews-heading*/ h2{
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+}
+
+.reviews-row{
+    display: flex;
+  
+    
+}
+
+.review-img img{
+    border-radius: 45px;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: -40px;
+}
+.review-message {
+  color: var(--secondary-color);
+  margin: 1rem 0; 
+  flex-grow: 1; 
+  overflow: hidden; 
+}
+
+.student-name{
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+/* end review section */
+
+/* start rating section */
+.rating {
+  display: flex;
+  font-size: 24px;
+  color: gold;
+
+}
+
+.courseRate{
+  justify-content: center;
+}
+.rating::before {
+  content: "★";
+  margin-right: 5px;
+}
+
+.rating[data-rating="1"]::before {
+  content: "★☆☆☆☆"; 
+}
+
+.rating[data-rating="2"]::before {
+  content: "★★☆☆☆";
+}
+
+.rating[data-rating="3"]::before {
+  content: "★★★☆☆";
+}
+
+.rating[data-rating="4"]::before {
+  content: "★★★★☆"; 
+}
+
+.rating[data-rating="5"]::before {
+  content: "★★★★★"; 
+}
+
+#icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+:root{
+  --primary-color:#fff;
+  --secondary-color:#333333;
+  --third-color:#70AE6E;
+  --fourth-color:#3c6e71;
+  --fifth-color:#70ae6e;
+  --sixth-color:#3C6E71;
+  --eighth-color:#BEEE62;
+}
+.dark-theme{
+  --primary-color:#333333;
+  --secondary-color:#fff;
+  --third-color:#f4a261;
+  --fourth-color:#fff;
+  --fifth-color:#f4a261;
+  --sixth-color:#ed7c20;
+  --eighth-color:#ffd362;
+}
+/* Responsive Styles */
+
+/*small devices */
+@media only screen and (max-width: 768px){
+  .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .nav-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-link {
+      margin-bottom: 5px;
+    }
+    .footer {
+    text-align: center;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .phone-number, .email-address{
+    margin: 1px;
+    display: block;
+  }
+
+  .reviews-row{
+    flex-direction: column;
+}
+.review {
+  width: 90%;
+  box-sizing: border-box;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+  .reviews-row{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.review {
+  width: 45%;
+  box-sizing: border-box;
+ 
+}
+}
+
+ /*Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .reviews-row{
+    flex-direction: row;
+    justify-content: center;
+}
+.review {
+  box-sizing: border-box;
+  width: calc(33.33% - 2rem);
+}
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header">
+        <a href="index.html" accesskey="h" > <img src="images/logo.PNG" alt="Logo"  class="logo"></a>
+          
+  <nav class="nav-bar" >
+    <a href="parentDashboard.html" class="nav-link" accesskey="p">Parent</a>
+    <a href="Administrator.html" class="nav-link" accesskey="a">Administrator</a>
+    <a href="Course.html" class="nav-link" accesskey="c">Courses</a>
+    <a href="Tutor.html" class="nav-link" accesskey="t">Tutors</a>
+    
+  </nav>
+  
+</div>
+</header>
+<img src="images/moon.png" alt="moon" id="icon">
+<section>
+  <img class="mySlides" src="images/kid1-nav.jpg" alt="kids"
+  style="width:100%">
+  <img class="mySlides" src="images/kid2-nav.jpg" alt="kids"
+  style="width:100%">
+  <img class="mySlides" src="images/kid3-nav.jpg" alt="kids"
+  style="width:100%">
+</section>
+<main>
+<div style="display: flex; flex-direction: row; justify-content: center;">
+<section class="w3-container w3-center w3-content" style="max-width:600px;  text-align: center;">
+  <h2 class="w3-wide" style="color:var(--fifth-color)">Our vision</h2>
+ 
+  <p class="w3-justify" style="color:--fourth-color">"create a dynamic and engaging website that promotes the benefits of programming education for children and provides a seamless registration process for parents interested in enrolling their kids in programming classes. We envision a user-friendly, accessible, and organized site that not only showcases the advantages of teaching kids programming but also instills a sense of excitement and curiosity in parents and children alike."</p>
+</section>
+</div>
+<!-- start courses section -->
+<div class="reviews-heading"><h2 style="color:var(--fifth-color)">Courses</h2></div>
+  <section class="course-section">
+    <div class="course-images">
+      <div class="course-link">
+        <img src="images/scratch-shaug.jpg" alt="scratch">
+        <h3>Scratch coding</h3>
+        <p class="course-description">learn the basics of coding with scratch by creating game.</p>
+         
+            <div class="rating courseRate" data-rating="4"></div>
+          
+      </div>
+      <div class="course-link">
+        <img src="images/Pythonprogrammingfundamentals-shaug.jpg" alt="python">
+        <h3>Python programming fundamentals </h3>
+        <p class="course-description">create simple codes project in a fun way with Python Programming.</p>
+        
+            <div class="rating courseRate" data-rating="3"></div>
+        
+      </div>
+      <div class="course-link">
+        <img src="images/Introtohtmlandcss-shaug.jpg" alt="html&css">
+        <h3>Intro to html and css</h3>
+        <p class="course-description">learn the basics of websites by learning text based coding HTML and CSS markup languages.</p>
+       
+            <div class="rating courseRate" data-rating="5"></div>
+          
+      </div>
+
+      <div class="course-link">
+        <img src="images/WebDevelopment-shaug.jpg" alt="web">
+        <h3>Web Development(3 is required)</h3>
+        <p class="course-description">learn about the design, development, and application of robotics systems and automation technologies.</p>
+        
+            <div class="rating courseRate" data-rating="4"></div>
+          
+      </div>
+      <div class="course-link">
+        <img src="images/RoboticsandAutomation-shaug.jpg" alt="robo">
+        <h3>Robotics and Automation</h3>
+        <p class="course-description">teach the children how to create thier own video games and how to program the game.</p>
+       
+            <div class="rating courseRate" data-rating="4"></div>
+          
+      </div>
+      <div class="course-link">
+        <img src="images/GameDevelopment-shaug.jpg" alt="game" class="image">
+        <h3>Game Development</h3>
+        <p class="course-description">create websites using HTML and CSS markup languages to bulid a new website.</p>
+        
+            <div class="rating courseRate" data-rating="5"></div>
+          
+      </div>
+    </div>
+  </section>
+  <!-- end courses section -->
+<hr>
+
+<!-- reviews section -->
+  <section id="reviews" >
+    <div class="reviews-container">
+                <h2 style="color:var(--fifth-color)">reviews</h2>
+          <div class="reviews-row"><!---->
+            <div class="review">
+             <div class="review-img"><img src="images/icon1-shaug.png" alt=""></div><br>
+             <div class="student-name">reem</div>
+             
+                <div class="rating" data-rating="4"></div>
+              
+             <div class="review-message" style="color: var(--fourth-color)">I enrolled my child in the Scratch coding course, and I couldn't be happier with the results. My child learned the basics of coding while creating fun games, which kept them engaged and excited about learning.I would highly recommend them to other parents.</div>
+             
+            </div>
+             <div class="review">
+             <div class="review-img"><img src="images/icon2-shaug.png" alt=""></div><br>
+             <div class="student-name">khalid</div>
+             
+                <div class="rating" data-rating="3"></div>
+              
+             <div class="review-message" style="color: var(--fourth-color)">The Robotics and Automation course was an excellent choice for my child. They gained a deep understanding of robotics systems and automation technologies, which is a valuable skill in today's tech-driven world. The Game Development course was equally impressive, as my child learned how to create their own video games and program them. The HTML and CSS courses provided a great introduction to web development, allowing them to build their own websites. These courses not only nurtured their creativity but also provided them with valuable technical skills.</div>
+            </div>
+             <div class="review">
+             <div class="review-img"><img src="images/icon3-shaug.png" alt=""></div><br>
+             <div class="student-name">saad</div>
+             
+                <div class="rating" data-rating="5"></div>
+              
+             <div class="review-message" style="color: var(--fourth-color)">The Python programming fundamentals were a logical next step, making coding more interesting and challenging. The HTML and CSS courses were a great segue into web development. They were able to create their own websites, which was both educational and fun. Overall, the combination of these courses gave my child a well-rounded understanding of programming and web development. I'm impressed with the quality of education and the engagement provided by these courses.</div>
+            </div>
+          </div>
+    </div>
+  </section>
+</main>
+  <!-- end reviews section -->
+  <footer class="footer">
+    <section class="contact-information">
+      <a class="phone-number" href=""><i class="fa">&#xf095;
+      </i>+91 11133 77788</a>
+      <span class="spacer"> | </span> 
+      <a class="email-address" href="mailto:support@coderangers.com"><i class="fa fa-envelope"></i>support@coderangers.com</a>
+      <span class="spacer"> | </span> 
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a> 
+    </section>
+    <hr>
+      <p>&copy; 2023 Code Rangers. All rights reserved</p>
+      </footer>
+    <script>
+      // Automatic Slideshow - change image every 3 seconds
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000);
+      }
+
+      var icon = document.getElementById("icon");
+
+icon.onclick = function() {
+  document.body.classList.toggle("dark-theme");
+
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "images/sun.png";
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.src = "images/moon.png";
+    localStorage.setItem("theme", "light");
+  }
+}
+
+// Check the theme preference in local storage and apply the appropriate theme class
+window.onload = function() {
+  var theme = localStorage.getItem("theme");
+
+  if (theme === "dark") {
+    document.body.classList.add("dark-theme");
+    icon.src = "images/sun.png";
+  } else {
+    document.body.classList.remove("dark-theme");
+    icon.src = "images/moon.png";
+  }
+}
+      </script>
+
+</body>
+</html>

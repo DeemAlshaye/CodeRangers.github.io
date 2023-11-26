@@ -1,0 +1,243 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+/*style the body exept header & footer*/
+body{
+  background-image: url("images/kidsCoding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+
+}
+main > body {
+  min-height: 100vh;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+ padding: 20px;
+  
+ 
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: calc(100vh - 100px); /* Adjust the value to include the header and footer heights */
+  text-align: lef;
+  
+
+
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: var(--primary-color);
+  padding: 60px;
+  border-radius: 8px; /* round edge  */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  
+}
+.container h1 {
+  font-size: 1.5rem;
+  color: #f4743b;
+  font-weight: bold;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px; 
+}
+.form .input-box {
+  width: 50%;
+  margin-top: 20px;
+  
+}
+
+.form .photo-box{
+  width: 47%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: var(--secondary-color);
+}
+label {
+  color: var(--secondary-color)
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  background-color: #fff8d7;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 50px;
+}
+.form .gender-box {
+  margin-top:20px;
+  width: 50%;
+}
+
+.form .gender-option{
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  background-color: #fff8d7;
+  padding: 0 15px;
+}
+.gender-box h3 {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color:#70AE6E;
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+h3.info-type{
+  font-size:1.2rem;
+  
+  color: var(--inputtype-color);
+  border-radius: 0px;
+  background-color: var(--back-color);
+  outline: none;
+ font-weight: 500;
+  text-align: left;
+  padding: 8px 3px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  
+  width:100%;
+  box-shadow: 0 0 15px rgba(41, 41, 41, 0.1);
+}
+
+input.container{ 
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+
+  
+}
+
+
+.form #Register {
+  display: block;
+  margin: auto;
+  height: 55px;
+  width: 30%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background:#f4743b;
+}
+.form #Register:hover {
+  background: rgb(22, 117, 75);
+  color: #beee62;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+
+  @media screen and (max-width: 480px) {
+    .logo {
+      max-width: 4em;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logo {
+      max-width: 6em;
+    }
+  }
+  
+
+
+}
+
+
+/*
+.toggle-btn{
+  background:#70AE6E;
+  color:#fff;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:150px;
+  height:40px;
+  border-radius:20px;
+  cursor:pointer;
+  
+}
+
+.toggle-btn img{
+  
+  width:25px;
+  margin-left:10px;
+}*/
+
+:root{
+  --prima-color:#fff;
+  --secondary-color:#333333;
+  --back-color:#fff;
+  --inputtype-color:#70AE6E;
+  --fifth-color:#70ae6e;
+  --sixth-color:#3C6E71;
+  --eighth-color:#BEEE62;
+  --breadcrumb1-color:#BEEE62;
+  --breadcrumb2-color:#3C6E71;
+}
+.dark-theme{
+  --prima-color:#636060;
+  --secondary-color:#fff;
+  --back-color:#615d5a;
+  --inputtype-color:#ffd362;
+  --fifth-color:#f4a261;
+  --sixth-color:#ed7c20;
+  --eighth-color:#ffd362;
+  --breadcrumb1-color:#ffd362;
+  --breadcrumb2-color:#ed7c20;
+}

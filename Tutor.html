@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title> Tutors </title>
+			<link rel="stylesheet" href="CodeRangers.css">
+			<link rel="stylesheet" href="header-footer-style.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel="icon" type = "image/x-icon" href="images/logoJana.png">
+			
+		</head>
+		
+		<body class=bodyTutor>
+			<header>
+				<div class="header">
+				  <a href="index.html" accesskey="h" > <img src="images/logo.PNG" alt="Logo"  class="logo"></a>  
+				  <nav class="nav-bar">
+					<a href="parentDashboard.html" class="nav-link" accesskey="p">Parent</a>
+					<a href="Administrator.html" class="nav-link" accesskey="a">Administrator</a>
+					<a href="Course.html" class="nav-link" accesskey="c">Courses</a>
+					<a href="Tutor.html" class="nav-link" accesskey="t">Tutors</a>
+				  </nav>
+				</div>
+			  </header>
+			<ul id="breadcrumb">
+			  <li><a href="index.html"><span class="fa fa-home"> </span></a></li>
+			  <li><a href="Tutor.html"><span class=" fa fa-info-circle"> </span>Tutor</a></li>
+			</ul>
+			
+			<main>
+				<div class="mainimage">
+					<img src="images/tutorsJana4.jpg" alt="Tutors main image" id="main-img" style="width:100%" >
+				</div>
+
+			<div class="tutor-container">
+				
+				<h1 style="color:var(--third-color)">Our Tutors</h1>
+				<div class="sorting-section">
+				  <h4 style="color:var(--third-color)">Please choose the sorting order for tutor names</h4>
+				  <form>
+					<select name="Tutorname">
+					  <option value="A-Z">A-Z</option>
+					  <option value="Z-A">Z-A</option>
+					</select>
+				  </form>
+				</div>
+					
+				<div class="Tutors">
+				
+					
+					<div class="scroll">
+					
+					
+					
+						<div class="tutor one">
+								<img src="images/SaraAhmadJana.jpg" alt="Sara Ahmad tutor">
+								
+								
+								<h5>Sara Ahmad  </h5>
+								
+								
+								<h5>Develop Scratch games</h5>
+						</div>
+						
+						<div class="tutor two">
+								<img src="images/FaisalSaadJana.jpg" alt="Faisal Saad tutor">
+
+
+								<h5>Faisal Saad</h5>
+								
+								
+								<h5>programming fundamentals </h5>
+						</div>
+						
+						<div class="tutor three">
+								<img src="images/NouraKhalidJana.webp" alt="Noura Khalid tutor">
+								
+								
+								<h5>Noura Khalid </h5>
+								
+								
+								<h5>front-end designs</h5>
+						</div>
+						
+						<div class="tutor four">
+								<img src="images/MohammadAliJana.jpg" alt="Mohammad Ali tutor">
+								
+								
+								<h5>Mohammad Ali  </h5>
+								
+								
+								<h5>Intelligent systems and robotics</h5>
+						</div>
+						
+						<div class="tutor five">
+								<img src="images/ArwaFahadJana.jpeg" alt="Arwa Fahad tutor">
+								
+								
+								<h5>Arwa Fahad </h5>
+								
+								
+								<h5>Artificial Intelligence in Games</h5>
+						</div>
+						
+						
+						<div class="tutor six">
+								<img src="images/AbdullahYasserJana.jpg" alt="Abdullah Yasser tutor">
+								
+								
+								<h5>Abdullah Yasser  </h5>
+								
+								
+								<h5>Develop Back-End Architecture</h5>
+						</div>	
+						
+						
+						
+						
+					</div>
+				
+				</div>
+			</div>
+			
+			
+			
+			</main>
+			<footer class="footer">
+				<section class="contact-information">
+				  <a class="phone-number" href=""><i class="fa">&#xf095;
+				  </i>+91 11133 77788</a>
+				  <span class="spacer"> | </span> 
+				  <a class="email-address" href="mailto:support@coderangers.com"><i class="fa fa-envelope"></i>support@coderangers.com</a>
+				  <span class="spacer"> | </span> 
+				  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+				  <a href="https://twitter.com/" class="fa fa-twitter"></a>
+				  <a href="https://www.instagram.com/" class="fa fa-instagram"></a> 
+				</section>
+				<hr>
+				  <p>&copy; 2023 Code Rangers. All rights reserved</p>
+				  </footer>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+				  const tutorContainer = document.querySelector('.scroll');
+				  const sortingSelect = document.querySelector('select[name="Tutorname"]');
+				  const colorArray = ['var(--third-color)', 'var(--third-color)', 'var(--third-color)', 'var(--third-color)', 'var(--third-color)', 'var(--third-color)'];
+
+				  const tutors = [
+					{ name: "Sara Ahmad", image: "images/SaraAhmadJana.jpg", description: "Develop Scratch games" },
+					{ name: "Faisal Saad", image: "images/FaisalSaadJana.jpg", description: "Programming fundamentals" },
+					{ name: "Noura Khalid", image: "images/NouraKhalidJana.webp", description: "Front-end designs" },
+					{ name: "Mohammad Ali", image: "images/MohammadAliJana.jpg", description: "Intelligent systems and robotics" },
+					{ name: "Arwa Fahad", image: "images/ArwaFahadJana.jpeg", description: "Artificial Intelligence in Games" },
+					{ name: "Abdullah Yasser", image: "images/AbdullahYasserJana.jpg", description: "Develop Back-End Architecture" }
+				  ];
+
+				  function renderTutors(order) {
+					const sortedTutors = order === 'A-Z' ?
+					  tutors.slice().sort((a, b) => a.name.localeCompare(b.name)) :
+					  tutors.slice().sort((a, b) => b.name.localeCompare(a.name));
+
+					tutorContainer.innerHTML = '';
+
+					sortedTutors.forEach((tutor, index) => {
+					  const tutorElement = document.createElement('div');
+					  tutorElement.className = 'tutor';
+					  tutorElement.innerHTML = `
+						<img src="${tutor.image}" alt="${tutor.name} tutor">
+						<h5 style="color:${colorArray[index % colorArray.length]}">${tutor.name}</h5>
+						<h5>${tutor.description}</h5>
+					  `;
+					  tutorContainer.appendChild(tutorElement);
+					});
+				  }
+
+				  renderTutors(sortingSelect.value);
+				  sortingSelect.addEventListener('change', function () {
+					renderTutors(this.value);
+				  });
+				});
+
+				window.onload = function () {
+				  var theme = localStorage.getItem("theme");
+
+				  if (theme === "dark") {
+					document.body.classList.add("dark-theme");
+				  } else {
+					document.body.classList.remove("dark-theme");
+				  }
+				}
+
+			</script>
+			
+		</body>
+		
+</html>

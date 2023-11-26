@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="header-footer-style.css">
+    <link rel="icon" type = "image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="header-footer-style.css">
+    <style>
+      
+  body{
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}    
+#ScheduleHeader{
+text-align: justify;
+}
+
+
+table{
+    border: 1.5px solid;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 3em;
+}
+
+th, td {
+    border: 1px solid;
+    height: 50px;
+    width: 100px;
+}
+
+.weekend {
+    background-color: #E9C46A;
+}
+
+td h2 {
+    font-size: 24px;
+}
+
+:root{
+  --primary-color:#fff;
+  --secondary-color:#333333;
+  --third-color:#70AE6E;
+  --fourth-color:#3c6e71;
+  --fifth-color:#70ae6e;
+  --sixth-color:#3C6E71;
+  --eighth-color:#BEEE62;
+}
+.dark-theme{
+  --primary-color:#333333;
+  --secondary-color:#fff;
+  --third-color:#f4a261;
+  --fourth-color:#fff;
+  --fifth-color:#f4a261;
+  --sixth-color:#ed7c20;
+  --eighth-color:#ffd362;
+}
+    </style>
+</head>
+<body>
+  <header>
+    <div class="header">
+    <a href="index.html" > <img src="images/logo.png" alt="Logo"  class="logo"></a>
+
+
+<nav class="nav-bar">
+  <a href="parentDashboard.html" class="nav-link" accesskey="p">Parent</a>
+  <a href="Administrator.html" class="nav-link" accesskey="a">Administrator</a>
+  <a href="Course.html" class="nav-link" accesskey="c">Courses</a>
+  <a href="Tutor.html" class="nav-link" accesskey="t">Tutors</a>
+</nav>
+</div>
+</header>
+<ul id="breadcrumb">
+  <li><a href="index.html"><span class="fa fa-home"> </span></a></li>
+  <li><a href="Administrator.html"><span class=" fa fa-info-circle"> </span>Administrator</a></li>
+  <li><a href="schedule2.html"><span class="fa fa-snowflake-o"></span>Schedule</a></li>
+</ul>
+	
+<main>
+	<table align="center">
+    <caption>Tutor schedule</caption>
+		<tr>
+            <th></th>
+			<th></th>
+			<th>Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th >Saturday</th>
+		</tr>
+		<tr>
+			<td rowspan="6"><b>T.Abdullah yeser<br>T.Nora Khalid<br>T.Mohammed ali<br>T.Faisal saad<br>T.Sara ahmed</b></td>
+		</tr>
+		<tr>
+			<td><b>3:00 - 4:00</b></td>
+			<td rowspan=""></td>
+			<td></td>
+			<td rowspan="2">Scratch 1</td>
+			<td class="weekend"></td>
+			<td ></td>
+            <td ></td>
+            <td ></td>
+		</tr>
+		<tr>
+			<td><b>4:00 - 5:00</b></td>
+			<td></td>
+            <td></td>
+			<td class="weekend"></td>
+            <td colspan="3">ML for children</td>
+            
+		</tr>
+		<tr>
+			<td><b>5:00 - 6:00</b></td>
+			<td colspan="2" rowspan="2">Robo</td>
+			<td></td>
+			<td class="weekend"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td><b>6:00 - 7:00</b></td>
+			<td colspan=""></td>
+            <td class="weekend"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td><b>7:00 - 8:00</b></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="weekend"></td>
+			<td></td>
+            <td></td>
+            <td></td>
+		</tr>
+	</table>
+</main>
+    <footer class="footer">
+        <section class="contact-information">
+          <a class="phone-number" href=""><i class="fa">&#xf095;</i>
+            +91 11133 77788</a>
+            <span class="spacer"> | </span> 
+            <a class="email-address" href="mailto:support@coderangers.com"><i class="fa">&#xf2b6;</i>support@coderangers.com</a>
+            <span class="spacer"> | </span> 
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a> 
+        </section>
+        <hr>
+          <p>&copy; 2023 Code Rangers. All rights reserved
+          </footer>
+          <script>
+      
+            window.onload = function() {
+              var theme = localStorage.getItem("theme");
+            
+              if (theme === "dark") {
+                document.body.classList.add("dark-theme");
+              } else {
+                document.body.classList.remove("dark-theme");
+              }
+            }
+      
+            </script>
+</body>
+</html>

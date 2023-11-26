@@ -1,0 +1,302 @@
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+[class*="col-"] {
+  float: left;
+  padding: 1em;
+}
+
+.courses ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+.courses{
+
+	overflow:scroll;
+	height:30em;
+	background-color:var( --form);
+  font-size: 1.1em;
+
+  border-radius: 0.4em;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.courses li{
+margin-bottom: 2em;
+
+  }
+
+div.Filter-by{
+	background-color:var( --form);
+
+  margin-bottom: 4em;
+  border-radius: 0.4em;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+select{
+  margin-bottom: 4em;
+font-size: 1.5em;
+border:none;
+
+border-radius: 0.2em;
+color:var(--font);
+}
+
+select[name="select-kid"]{
+
+	background-color:var( --form);
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		border-radius: 0.2em;
+		border:none;
+		padding:0;
+    color:var(--font);
+}
+
+body {
+
+  color:var(--font);
+}
+
+
+li.Scratchcoding:before{
+		background-image:url("images/scratch-shahad.jpg");
+		background-size:3em 3em;
+	display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+li.PythonProgrammingFundamentals:before{
+		background-image:url("images/python2.png");
+		background-size:3em 3em;
+	display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+li.Introtohtmlandcss:before{
+		background-image:url("images/htmlcss.png");
+		background-size:3em 3em;
+	display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+li.Webdevelopment:before{
+		background-image:url("images/web.png");
+		background-size:3em 3em;
+	display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+li.RoboticsandAutomation:before{
+		background-image:url("images/robot.png");
+		background-size:3em 3em;
+	display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+li.GameDevelopment:before{
+		background-image:url("images/game.png");
+		background-size:3em 3em;
+	display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+li.JavaScript:before{
+  background-image:url("images/javascript.png");
+  background-size:3em 3em;
+display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+li.SQL:before{
+  background-image:url("images/sql.png");
+  background-size:3em 3em;
+display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+
+li.CS:before{
+  background-image:url("images/cs.png");
+  background-size:3em 3em;
+display:inline-block;
+height:3em;
+width:3em;
+content:"";
+}
+
+
+input[value="Enroll"]{
+
+
+margin-left:43%;
+
+	background-color:var(--eighth-color);
+margin-bottom: 1em;
+      bottom: 0;
+	font-size:2em;
+	color:var(--font);
+
+border:none;
+	  border-radius: 0.1em;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.Filter input{
+	width:30%;
+	margin-left:32%;
+font-size:1.5em;
+	font-weight:bold;
+color:var(--font);
+margin-bottom: 1em;
+	background-color:var(--eighth-color);
+	  border: none;
+	  border-radius: 0.1em;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.Filter-by h3{
+
+  margin: 1em;
+}
+
+::-webkit-scrollbar {
+  display: inline;
+}
+
+
+
+input[value="Enroll"]:hover{
+	background-color:var(--sixth-color);
+}
+.Filter input:hover{
+	background-color:var(--sixth-color);
+}
+
+
+.courses{
+  margin: 1em;
+  .showItem {
+    display: list-item;  
+}
+
+
+.hideItem {
+    display: none;
+}
+}
+
+/* For mobile phones: */
+
+
+[class*="col-"] {
+  width: 100%;
+
+}
+select{
+  background-color: var(--select);
+  width: 100%;
+}
+:root{
+  --primary-color:#fff;
+  --secondary-color:#333333;
+  --third-color:#70AE6E;
+  --fourth-color:#3c6e71;
+  --fifth-color:#70ae6e;
+  --sixth-color:#3C6E71;
+  --eighth-color:#BEEE62;
+  --form:#f6f6f6;
+  --font:black;
+  --select:white;
+  --button:#3c6e71;
+  --button-hover:#ed7c20;
+  --color:#3C6E71;
+ 
+
+}
+.dark-theme{
+  --primary-color:#333333;
+  --secondary-color:#fff;
+  --third-color:#f4a261;
+  --fourth-color:#fff;
+  --fifth-color:#f4a261;
+  --sixth-color:#ed7c20;
+  --eighth-color:#ffd362;
+  --form:#5b5b5b;
+  --font:white;
+  --select:rgb(58, 58, 58);
+  --button:#2b5153;
+  --button-hover:#f4a261;
+  --color:#333333;
+ 
+}
+
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .Filter input{
+    width:40%;
+
+  }
+
+
+input[value="Enroll"]{
+  margin-left:52%;
+
+  }
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+
+  /* For desktop: */
+
+  .Filter input{
+    width:40%;
+
+  }
+
+input[value="Enroll"]{
+  left:52%;
+
+  }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}

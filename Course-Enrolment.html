@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course enrolment</title>
+<link rel="icon" type = "image/x-icon" href="images/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="enroll.css">
+<link rel="stylesheet" href="header-footer-style.css">
+
+
+    <script>
+      
+      window.onload = function(){
+ 
+
+  // Retrieve the array from local storage
+  var retrievedChildrenNames = JSON.parse(localStorage.getItem("children"));
+
+  // Get the select element
+  var selectKid = document.querySelector('select[name="select-kid"]');
+
+  // Populate the select element with options
+  retrievedChildrenNames.forEach(function(childName) {
+    var option = document.createElement('option');
+    option.value = childName;
+    option.textContent = childName;
+    selectKid.appendChild(option);
+  });
+
+
+
+
+  //  courses multidimensional  array
+var courses = [
+  { name: "Python Programming Fundamentals", tutor: "Faisal Saad", prerequisite: "Intro to html and css" },
+  { name: "Intro to html and css", tutor: "Noura Khalid", prerequisite: "Scratch coding" },
+  { name: "Web development", tutor: "Abdullah Yasser", prerequisite: "Intro to html and css" },
+  { name: "Robotics and Automation", tutor: "Mohammed Ali", prerequisite: "Python Programming Fundamentals" },
+  { name: "Game Development", tutor: "Arwa Fahad", prerequisite: "Scratch coding" },
+  { name: "Scratch coding", tutor: "Sara Ahmad", prerequisite: "Roblox coding" },
+  { name: "Java Script", tutor: "Mohammed Ali", prerequisite: "" },
+  { name: "SQL", tutor: "Arwa Fahad", prerequisite: "" },
+  { name: "CS", tutor: "Abdullah Yasser", prerequisite: "" }
+];
+
+// Get the course list container
+var courseListContainer = document.getElementById("courseList");
+courseListContainer.innerHTML = "";
+
+
+
+// Loop through the courses array and create list items for each course
+courses.forEach(function (course) {
+  var listItem = document.createElement("li");
+  listItem.classList.add(course.name.replace(/\s+/g, '')); // Add a class without spaces
+  listItem.setAttribute("datatutor", course.tutor);
+  listItem.setAttribute("data-tutor", course.tutor.replace(/\s+/g, ''));
+  listItem.setAttribute("data-prerequisites", course.prerequisite.replace(/\s+/g, ''));
+
+  listItem.textContent = course.name 
+  var checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.name = "course";
+  checkbox.value = course.name;
+  listItem.appendChild(checkbox);
+  courseListContainer.appendChild(listItem);
+  
+});
+var theme = localStorage.getItem("theme");
+
+if (theme === "dark") {
+  document.body.classList.add("dark-theme");
+  icon.src = "images/sun.png";
+} else {
+  document.body.classList.remove("dark-theme");
+  icon.src = "images/moon.png";
+}
+}
+
+
+ //function Filter the courses array based on the selected tutor and prerequisite
+ 
+ function applyFilter() {
+  var tutorSelector = document.getElementById("tutorSelector");
+  var courseSelector = document.getElementById("courseSelector");
+  var courseList = document.getElementById("courseList").getElementsByTagName("li");
+
+  for (var i = 0; i < courseList.length; i++) {
+    var tutor = courseList[i].getAttribute("data-tutor");
+    var prerequisites = courseList[i].getAttribute("data-prerequisites");
+
+    if ((tutorSelector.value === "" || tutorSelector.value === tutor) &&
+        (courseSelector.value === "" || courseSelector.value === prerequisites)) {
+      courseList[i].style.display = "block";
+    } else {
+      courseList[i].style.display = "none";
+    }
+  }
+}
+
+
+//check if the form is valid or not if it is valid it displays the information
+function validateAndEnroll() {
+  var selectedChild = document.getElementById("selectKid").value;
+  var selectedCourses = document.querySelectorAll('input[name="course"]:checked');
+
+  // There is no child selected. not valid
+
+  if (selectedChild === "" && selectedCourses.length === 0)  {
+    alert("Please select a child and at least one course.");
+    return;
+  }
+
+  if (selectedChild === "") {
+    alert("Please select a child.");
+    return;
+  }
+
+
+  // There is no course selected.not valid
+  if (selectedCourses.length === 0) {
+    alert("Please select at least one course.");
+    return;
+  }
+
+  // if it is valid
+  enroll(selectedChild, selectedCourses);
+}
+
+
+function enroll(selectedChild, selectedCourses) {
+  displayInformation(selectedChild, selectedCourses);
+  clearForm();
+}
+
+function displayInformation(selectedChild, selectedCourses) {
+  var enrolledInfo = document.getElementById("enrolledInfo");
+  // If there is previous information, it should be removed first then display the new information.
+  enrolledInfo.innerHTML = "";
+
+  // The information (child name, list of courses and their tutors) should be displayed in the page.
+  var infoHeader = document.createElement("h2");
+  infoHeader.textContent = "Enrollment Information";
+  infoHeader.style.color = "var(--color)"; // Set color for infoHeader
+  enrolledInfo.appendChild(infoHeader);
+
+  var childInfo = document.createElement("p");
+  childInfo.textContent = "Child: " + selectedChild;
+  childInfo.style.color = "#F4743B"; // Set color for childInfo
+  childInfo.style.fontWeight = "bold";
+  enrolledInfo.appendChild(childInfo);
+
+  var courseList = document.createElement("ul");
+
+  selectedCourses.forEach(function (course) {
+    var listItem = document.createElement("li");
+    var tutor = course.parentElement.getAttribute("datatutor");
+    listItem.textContent = "Course: " + course.value + ", Tutor: " + tutor;
+    listItem.style.color = "var(--font)"; // Set color for listItem text
+
+
+    courseList.appendChild(listItem);
+  });
+
+  enrolledInfo.appendChild(courseList);
+
+   // change style enrolledInfo
+   enrolledInfo.style.border = "double #2b5153"; 
+   enrolledInfo.style.padding="1em";
+   enrolledInfo.style.width="50%";
+   enrolledInfo.style.marginLeft="20%";
+   enrolledInfo.style.background="var(--form)";
+   enrolledInfo.style.borderRadius="0.5em";
+}
+
+
+// The form should be cleared.
+function clearForm() {
+  document.getElementById("selectKid").value = "";
+
+  var selectedCourses = document.querySelectorAll('input[name="course"]:checked');
+  selectedCourses.forEach(function(course) {
+    course.checked = false;
+  });
+}
+
+
+    </script>
+
+    
+    </head>
+
+    <body style="background-color:var(--primary-color)">
+      <header>
+        <div class="header">
+          <a href="index.html" accesskey="h" > <img src="images/logo.PNG" alt="Logo"  class="logo"></a>  
+          <nav class="nav-bar">
+            <a href="parentDashboard.html" class="nav-link" accesskey="p">Parent</a>
+            <a href="Administrator.html" class="nav-link" accesskey="a">Administrator</a>
+            <a href="Course.html" class="nav-link" accesskey="c">Courses</a>
+            <a href="Tutor.html" class="nav-link" accesskey="t">Tutors</a>
+          </nav>
+        </div>
+      </header>
+    <ul id="breadcrumb">
+      <li><a href="index.html"><span class="fa fa-home"> </span></a></li>
+      <li><a href="parentDashboard.html"><span class=" fa fa-info-circle"> </span>Parent</a></li>
+      <li><a href="Course-Enrolment.html"><span class="fa fa-snowflake-o"></span>Course Enrolment</a></li>
+    </ul>
+
+<main>
+  
+<div class="row">
+  <div  id="enrolledInfo"></div>
+  <form action="#" method="GET">
+<div class="select">
+
+<div class="Filter col-3 col-s-3">
+ 
+  <label for="select-kid" style="font-weight: bold;">Select Child:</label>
+<select name="select-kid" id="selectKid">
+  <option value="">None</option>
+ <!-- Retrieve the children's names from the local storage. and display them as options -->
+
+</select>
+
+
+<div class="Filter-by">
+<h3>Filter by</h3>
+
+<label for="tutorSelector" style="font-weight: bold;">Tutors:</label>
+<select id="tutorSelector">
+
+  
+<option value="">All</option>
+ <option value="SaraAhmad">SaraAhmad</option>
+ <option value="NouraKhalid">Noura khalid</option>
+  <option value="MohammedAli">Mohammed Ali</option>
+ <option value="AbdullahYasser">Abdullah yasser</option>
+  <option value="ArwaFahad">Arwa Fahad</option>
+ <option value="FaisalSaad">Faisal saad</option>
+ 
+</select>
+
+
+
+<br>
+
+<label for="courseSelector" style="font-weight: bold;">prerequisite:</label>
+<select id="courseSelector" >
+ 
+  <option value="">All</option>
+ <option value="Scratchcoding">Scratch coding </option>
+ <option value="PythonProgrammingFundamentals">Python programming </option>
+  <option value="Introtohtmlandcss">Intro to html and css</option>
+ <option value="Robloxcoding">Roblox coding</option>
+
+</select>
+<br>
+<input type="button" value="apply" onclick="applyFilter()">
+</div>
+
+</div>
+
+</div>
+
+<div class="courses col-s-8  col-8 " >
+<ul id="courseList">
+
+ <!--courses added in the java script-->
+ </ul>
+ 
+ 
+</div>
+
+
+</div>
+ <br>
+ <input type="submit" value="Enroll" onclick="validateAndEnroll()">
+</form>
+ 
+</main>
+<footer class="footer">
+  <section class="contact-information">
+    <a class="phone-number" href=""><i class="fa">&#xf095;
+    </i>+91 11133 77788</a>
+    <span class="spacer"> | </span> 
+    <a class="email-address" href="mailto:support@coderangers.com"><i class="fa fa-envelope"></i>support@coderangers.com</a>
+    <span class="spacer"> | </span> 
+    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/" class="fa fa-instagram"></a> 
+  </section>
+  <hr>
+    <p>&copy; 2023 Code Rangers. All rights reserved</p>
+    </footer>
+
+</body>
+</html>

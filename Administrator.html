@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title >Administrator</title>
+
+   <link rel="stylesheet" href="administrator-style.css">
+   <link rel="stylesheet" href="header-footer-style.css" >
+  <link rel="icon" type = "image/x-icon" href="images/logo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body id="s-body">
+  <header>
+    <div class="header">
+      <a href="index.html" accesskey="h" > <img src="images/logo.PNG" alt="Logo"  class="logo"></a>  
+      <nav class="nav-bar">
+        <a href="parentDashboard.html" class="nav-link" accesskey="p">Parent</a>
+        <a href="Administrator.html" class="nav-link" accesskey="a">Administrator</a>
+        <a href="Course.html" class="nav-link" accesskey="c">Courses</a>
+        <a href="Tutor.html" class="nav-link" accesskey="t">Tutors</a>
+      </nav>
+    </div>
+  </header>
+<ul id="breadcrumb">
+      <li><a href="index.html"><span class="fa fa-home"> </span></a></li>
+      <li><a href="Administrator.html"><span class=" fa fa-info-circle"> </span>Administrator</a></li>
+      
+    </ul>
+	
+<main id="s-main">
+  <div   class="start" >
+  <p id="current-week-start"></p>
+    <div id="list1" class="s-Courses-Tutors-Students col-s-3 col-3" >
+      <h2 class="s-h2" ><img src="images/online-course.png" alt="courses"> Courses</h2>
+      <ul>
+        <li class="s-li" > <span><img src="images/robot2.png" alt="robot" width="32" height="32" > Robotics and Automation</span><span> | Mohammed ali</span>
+		
+          <ul id="list1" class="s-ul ">
+		 
+            <li class="s-li"><img src="images/maha-s.png" alt="student" width="32" height="32">maha nasser</li>
+            <li class="s-li"><img src="images/sara-s.png" alt="student" width="32" height="32">sara saad</li>
+            <li class="s-li"><img src="images/lolo-s.png" alt="student" width="32" height="32">lolo faisal</li>
+            <li class="s-li"><img src="images/yasser-s.png" alt="student" width="32" height="32">yaser faisal</li>
+            <li class="s-li"><img src="images/ahmad-s.png" alt="student" width="32" height="32">ahmad saleh</li>
+			
+            <span id="dots1"></span><span id="more1">
+            <li class="s-li "><img src="images/saleh2-s.png" alt="student" width="32" height="32">saleh malki</li>
+            <li class="s-li "><img src="images/none-s.png" alt="student" width="32" height="32">nora faisal</li>
+            <li class="s-li "><img src="images/hadeel-s.png" alt="student" width="32" height="32">hadeel omar</li>
+            <li class="s-li "><img src="images/mansoor-s.png" alt="student" width="32" height="32">mansoor rakan</li>
+            </span><button onclick="myFunction1()" id="myBtn1">More</button>
+			
+          </ul>
+
+
+        </li>
+        <li class="s-li" ><span><img src="images/scratch-shahad.jpg" alt="scratch" width="32" height="32"  > Scratch coding</span><span> | Sara ahmad</span>
+          <ul class="s-ul" >
+            <li class="s-li"><img src="images/lolo-s.png" alt="student" width="32" height="32">lolo faisal</li>
+            <li class="s-li" ><img src="images/saad-s.png" alt="student" width="32" height="32">saad omar</li>
+           
+          </ul>
+        </li>
+		<li class="s-li"><span><img src="images/python2.png" alt="python" width="32" height="32" > Python programming fundamentals</span><span> | Faisal saad</span>
+          <ul id="list2" class="s-ul ">
+		 
+            <li class="s-li"><img src="images/omar-s.png" alt="student" width="32" height="32">omar ali</li>
+            <li class="s-li"><img src="images/Mohammad-s.png" alt="student" width="32" height="32">Mohammed faisal</li>
+            <li class="s-li"><img src="images/lolo-s.png" alt="student" width="32" height="32">lolo faisal</li>
+            <li class="s-li"><img src="images/sara-s.png" alt="student" width="32" height="32">sara saad</li>
+            <li class="s-li"><img src="images/ali-s.png" alt="student" width="32" height="32">ali abdullah</li>
+			
+			<span id="dots2"></span><span id="more2">
+
+            <li class="s-li "><img src="images/mansoor-s.png" alt="student" width="32" height="32">mansoor rakan</li>
+            <li class="s-li "><img src="images/fatema-s.png" alt="student" width="32" height="32">fatema ali</li>
+            </span><button onclick="myFunction2()" id="myBtn2">More</button>
+
+
+          </ul>
+        </li>
+		<li class="s-li"><span><img src="images/html.png" alt="html and css" width="32" height="32"  > intro to html and css</span><span> | Nora khalid</span>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/jana-s.png" alt="student" width="32" height="32">jana saad</li>
+            <li class="s-li"><img src="images/ali-s.png" alt="student" width="32" height="32">ali abdullah</li>
+            <li class="s-li"><img src="images/dema-s.png" alt="student" width="32" height="32">dema saleh</li>
+            
+          </ul>
+        </li>
+		<li class="s-li"><span><img src="images/web.png" alt="web dev" width="32" height="32"  > web Development</span><span> | abdullah yasser</span>
+          <ul class="s-ul">
+		  
+            <li class="s-li"><img src="images/asma-s.png" alt="student" width="32" height="32">asma faisal</li>
+            <li class="s-li"><img src="images/lena-s.png" alt="student" width="32" height="32">lena Abdullah</li>
+            <li class="s-li"><img src="images/nora-s.png" alt="student" width="32" height="32">nora abdulaziz</li>
+            <li class="s-li"><img src="images/ali-s.png" alt="student" width="32" height="32">ali abdullah</li>
+            <li class="s-li"><img src="images/faisal-s.png" alt="student" width="32" height="32">faisal abdulaziz</li>
+			
+			<span id="dots3"></span><span id="more3">
+
+            <li class="s-li "><img src="images/hadeel-s.png" alt="student" width="32" height="32">hadeel omar</li>
+            <li class="s-li "><img src="images/fatema-s.png" alt="student" width="32" height="32">ftema ali</li>
+            </span><button onclick="myFunction3()" id="myBtn3">More</button>
+
+		
+          </ul>
+        </li>
+		<li class="s-li"><span><img src="images/game.png" alt="game dev" width="32" height="32" > Game Development</span><span> | Arwa fahad</span>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/nora-s.png" alt="student" width="32" height="32">nora abdulaziz</li>
+            <li class="s-li"><img src="images/ali-s.png" alt="student" width="32" height="32">ali abdullah</li>
+            <li class="s-li"><img src="images/faisal-s.png" alt="student" width="32" height="32">faisal abdulaziz</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  
+  
+    <div id="list2" class="s-Courses-Tutors-Students col-s-3 col-3" >
+      <h2 class="s-h2"> Students</h2>
+      <ul class="s-ul">
+	
+        <li class="s-li"><img src="images/sara-s.png" alt="student" width="32" height="32">  sara saad</li>
+        <li class="s-li"><img src="images/ali-s.png" alt="student" width="32" height="32">ali abdullah</li>
+        <li class="s-li"><img src="images/nora-s.png" alt="student" width="32" height="32">nora abdulaziz</li>
+        <li class="s-li"><img src="images/lolo-s.png" alt="student" width="32" height="32">lolo faisal</li>
+        <li class="s-li"><img src="images/ahmad-s.png" alt="student" width="32" height="32">ahmad saleh</li>
+		
+		<span id="dots4"></span><span id="more4">
+		<li class="s-li "><img src="images/saleh2-s.png" alt="student" width="32" height="32">saleh malki</li>
+            <li class="s-li "><img src="images/none-s.png" alt="student" width="32" height="32">nora faisal</li>
+            <li class="s-li "><img src="images/hadeel-s.png" alt="student" width="32" height="32">hadeel omar</li>
+			<li class="s-li "><img src="images/mansoor-s.png" alt="student" width="32" height="32">mansoor rakan</li>
+            <li class="s-li "><img src="images/fatema-s.png" alt="student" width="32" height="32">fatema ali</li>
+            </span><button onclick="myFunction4()" id="myBtn4">More</button>
+
+      </ul>
+    </div>
+ 
+
+    <div id="list3" class="s-Courses-Tutors-Students col-s-3 col-3">
+      <h2 class="s-h2">Tutors  </h2>
+      <ul class="s-ul"  >
+        <li class="s-li" >
+        <a href="schedule.html" class="t" > <img src="images/arwa.png" alt="teacher" width="32" height="32"> Arwa fahad</a>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/game.png" alt="game dev" width="32" height="32"> Game Development</li>
+  
+          </ul>
+        </li>
+        <li class="s-li">
+          <a href="schedule2.html" class="t"><img src="images/abdullah.png" alt="teacher" width="32" height="32">  Abdullah yaser</a>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/web.png" alt="web dev" width="32" height="32"> Web Development</li>
+         
+          </ul>
+        </li >
+		 <li class="s-li">
+          <a href="schedule2.html" class="t" ><img src="images/nora.png" alt="teacher" width="32" height="32" >  Nora khalid</a>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/html.png" alt="html and css" width="32" height="32" > intro to html and css</li>
+            
+          </ul>
+        </li>
+		 <li class="s-li">
+          <a href="schedule2.html" class="t"><img src="images/Mohammad.png" alt="teacher" width="32" height="32" >   Mohammed ali</a>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/robot2.png" alt="robot" width="32" height="32" > Robotics and Automation</li>
+          </ul>
+        </li>
+		 <li class="s-li">
+          <a href="schedule2.html" class="t" ><img src="images/faisal.png" alt="teacher" width="32" height="32" >  Faisal saad</a>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/python2.png" alt="python" width="32" height="32"> Python programming fundamentals</li>
+            
+          </ul>
+        </li>
+		 <li class="s-li">
+          <a href="schedule2.html" class="t" ><img src="images/Sara.png" alt="teacher" width="32" height="32">  Sara ahmad</a>
+          <ul class="s-ul">
+            <li class="s-li"><img src="images/scratch-shahad.jpg" alt="scratch" width="32" height="32" > Scratch coding</li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  </main>
+  
+  <footer class="footer">
+    <section class="contact-information">
+      <a class="phone-number" href=""><i class="fa">&#xf095;
+      </i>+91 11133 77788</a>
+      <span class="spacer"> | </span> 
+      <a class="email-address" href="mailto:support@coderangers.com"><i class="fa fa-envelope"></i>support@coderangers.com</a>
+      <span class="spacer"> | </span> 
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a> 
+    </section>
+    <hr>
+      <p>&copy; 2023 Code Rangers. All rights reserved</p>
+      </footer>
+<script>
+var currentWeekStartElement = document.getElementById('current-week-start');
+
+var today = new Date();
+
+var startOfWeek = new Date(today.setDate(today.getDate() - today.getDay()));
+
+var formattedStartOfWeek = startOfWeek.toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' });
+
+currentWeekStartElement.textContent = formattedStartOfWeek;
+
+
+
+
+
+
+
+function myFunction1() {
+  var dots = document.getElementById("dots1");
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "More"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunction2() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "More"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunction3() {
+  var dots = document.getElementById("dots3");
+  var moreText = document.getElementById("more3");
+  var btnText = document.getElementById("myBtn3");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "More"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunction4() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "More"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+window.onload = function() {
+  var theme = localStorage.getItem("theme");
+
+  if (theme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+}
+
+</script>
+
+</body>
+</html>
